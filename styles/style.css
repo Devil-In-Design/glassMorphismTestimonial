@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/images/bg.jpg);
+    background: url(/images/bgRain.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -81,4 +81,69 @@ body {
 
 .elements.imgBx img {
     position: absolute;
+    width: calc(100% - 20px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.75);
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.05);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box:hover .elements.imgBx img {
+    opacity: 1;
+}
+
+.elements.name {
+    top: 235px;
+    left: initial;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    transform: translateZ(180px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    color: #000000;
+    font-weight: 500;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.25s;
+}
+
+.box:hover .elements.name {
+    top: 135px;
+    opacity: 1;
+}
+
+.elements.content {
+    top: initial;
+    left: initial;
+    bottom: 0;
+    right: -20px;
+    width: 85%;
+    min-height: 200px;
+    padding: 10px;
+    transform: translateZ(180px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements.content p {
+    position: relative;
+    color: #000000;
+    font-size: 0.85em;
+    font-weight: 400;
+    transition: 0.5s;
+    opacity: 0;
+    transition-delay: 0.5s;
+}
+
+.box:hover .elements.content p {
+    opacity: 1;
 }
