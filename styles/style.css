@@ -79,3 +79,6 @@ body {
     transform: translateZ(120px);
 }
 
+.elements.imgBx img {
+    position: absolute;
+}
